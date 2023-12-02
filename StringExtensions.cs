@@ -9,7 +9,7 @@ public static class StringExtensions
 
     public static List<List<int>> ToIntMap(this string value)
     {
-        return value.LinesToString()
+        return value.AsListOfStrings()
             .Select(x => x.ToCharArray()
                 .Select(x => Convert.ToInt32(Char.GetNumericValue(x))).ToList())
             .ToList();
@@ -23,7 +23,7 @@ public static class StringExtensions
             .ToList();
     }
         
-    public static List<string> LinesToString(this string value)
+    public static List<string> AsListOfStrings(this string value)
     {
         return value.Split("\r\n").ToList();
     }

@@ -44,12 +44,12 @@ public class Day01Test
     [Test]
     public void SolutionPart1()
     {
-        Console.Write(Day01.SolvePart1("Day01".ReadAll().LinesToString()));
+        Console.Write(Day01.SolvePart1("Day01".ReadAll().AsListOfStrings()));
     }
     
     [Test]
     public void SolutionPart2()
     {
-        Console.Write(Day01.SolvePart2("Day01".ReadAll().LinesToString()));
+        Console.Write(Day01.SolvePart2("Day01".ReadAll().AsListOfStrings()));
     }
 }
