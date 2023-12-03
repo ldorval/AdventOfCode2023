@@ -2,12 +2,7 @@
 
 public static class StringExtensions
 {
-    public static List<int> ToInts(this string value)
-    {
-        return value.Split(",").Select(int.Parse).ToList();
-    }
-
-    public static List<List<int>> ToIntMap(this string value)
+    public static List<List<int>> AsIntMap(this string value)
     {
         return value.AsListOfStrings()
             .Select(x => x.ToCharArray()
@@ -15,7 +10,7 @@ public static class StringExtensions
             .ToList();
     }
 
-    public static List<int> LinesToInts(this string value)
+    public static List<int> AsListOfInts(this string value)
     {
         return value
             .Split("\r\n")
@@ -23,8 +18,5 @@ public static class StringExtensions
             .ToList();
     }
         
-    public static List<string> AsListOfStrings(this string value)
-    {
-        return value.Split("\r\n").ToList();
-    }
+    public static List<string> AsListOfStrings(this string value) => value.Split("\r\n").ToList();
 }
